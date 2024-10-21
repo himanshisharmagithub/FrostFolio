@@ -10,12 +10,23 @@ body{
 }
 /* Header Section with Background Image */
 #header{
+    position: relative; /* Required for z-index to work */
+    z-index: 1; 
     width: 100%;
     height: 100vh;
-    background-image: url(./image/background.jpg);
+   /* background-image: url(./image/background.jpg);*/
     background-size: cover;
     background-position: center;
+    background-color: #000;
 
+}
+#particles-js {
+    position: absolute; /* Position it absolutely */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height of the header */
+    top: 0; /* Start at the top */
+    left: 0; /* Start at the left */
+    z-index: -1; /* Send it to the back */
 }
 .container{
     padding: 5px 5%;
@@ -117,13 +128,13 @@ nav ul li a:active {
 .custom-button:hover {
     background-color: #00c4b2; 
     color: #fff; 
-    transform: scale(1.05); /* Slight scale effect on hover */
+    transform: scale(1.05); 
 }
 
 /* Active/Click State */
 .custom-button:active {
-    background-color: #009f92; /* Darker color on click */
-    transform: scale(0.98); /* Slight shrinking effect on click */
+    background-color: #009f92; 
+    transform: scale(0.98); 
 }
 .about .custom-button {
     margin-left: 48px;
