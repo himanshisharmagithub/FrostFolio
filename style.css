@@ -899,9 +899,15 @@ html {
         width: 280px;
         height: 280px;
     }
+    .column-2 {
+        padding: 0 10px; /* Decrease left and right padding */
+    }
+
     .column-2 p {
-        font-size: 14px; /* Decrease font size of the paragraph */
+        font-size: 16px; /* Decrease font size of the paragraph */
         line-height: 1.5; /* Adjust line height for better readability */
+        margin: 0; /* Remove any default margin */
+        width: 100%; /* Ensure the paragraph takes full width */
     }
 
     .skills-section {
