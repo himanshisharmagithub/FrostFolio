@@ -14,7 +14,7 @@ body{
     z-index: 1; 
     width: 100%;
     height: 100vh;
-   /* background-image: url(./image/background.jpg);*/
+   background-image: url(./image/background.jpg);
     background-size: cover;
     background-position: center;
     background-color: #000;
@@ -41,7 +41,52 @@ nav{
 .logo{
     width: 150px;
 }
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
 
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #04eadd;
+}
+
+/* Mobile menu styles */
+.nav-links#navbar {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 110px;
+    width: 250px;
+    height: 60vh;
+    background-color: #333;
+    padding: 30px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Close button styling */
+.close-btn {
+    font-size: 1.5em;
+    color: #04eadd;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -679,14 +724,44 @@ html {
         align-items: center; 
         width: 100%; 
     }
+    .logo {
+        width: 70px; /* Adjust this value to your desired logo size */
+        height: 60px; /* Maintain aspect ratio */
+    }
     nav ul li {
         margin: 10px 0; 
     }
 
     .header-text {
-        margin-top: 20%;
+        margin-top: 40%;
+    }
+    nav ul {
+        display: none; /* Hide menu */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-links {
+        display: none; /* Hide desktop nav */
+    }
+    .nav-links#navbar.show {
+        display: flex; /* Show nav links in mobile menu */
+    }
+    .menu-toggle {
+        display: block; /* Show toggle button */
     }
 
+    .show {
+        display: flex; /* Show menu on toggle */
+    }
     .column-1, .column-2 {
         flex-basis: 100%;
         padding: 10px;
@@ -730,6 +805,72 @@ html {
         width: 60px;
         height: 60px;
     }
+    #projects-section {
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+
+    /* Project Card Dimensions */
+    .project-card {
+        width: 80%; /* Make cards narrower */
+        height: 400px; /* Increase height */
+        /*margin-bottom: 30px;*/
+    }
+
+    .project-card-inner {
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Front and Back Face Consistency */
+    .project-card-front, 
+    .project-card-back {
+        height: 80%; /* Match heights */
+        width: 80%; /* Match widths */
+    }
+
+    /* Image Scaling */
+    .project-card-front img {
+        height: 100%; /* Set image height within the card */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Front Card Text */
+    .project-card-front h2 {
+        font-size: 18px; /* Adjust font size */
+        padding: 10px 0;
+    }
+
+    /* Back Card Text */
+    .project-card-back p {
+        font-size: 15px; /* Smaller text */
+    }
+
+    .project-card-back a {
+        font-size: 14px;
+    }
+    #contact-section {
+        padding: 60px 10px;
+    }
+
+    .contact-container {
+        flex-direction: column; 
+        padding: 20px;
+    }
+
+    .contact-info {
+        width: 100%;
+        text-align: center; /* Center align for better fit */
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+    .portfolio-footer {
+        font-size: 12px;
+    }
 }
 
 /* Small Screens (480px and below) */
@@ -755,8 +896,12 @@ html {
     }
 
     .column-1 img {
-        width: 200px;
-        height: 200px;
+        width: 280px;
+        height: 280px;
+    }
+    .column-2 p {
+        font-size: 14px; /* Decrease font size of the paragraph */
+        line-height: 1.5; /* Adjust line height for better readability */
     }
 
     .skills-section {
@@ -793,6 +938,22 @@ html {
 .skill-shape-circle {
     width: 50px;
     aspect-ratio: 1 / 1; 
+}
+.project-card {
+    width: 100%; /* Full width on very small screens */
+    height: 380px; /* Slightly shorter height */
+}
+
+/* Adjusting font sizes further for small screens */
+.project-card-front h2,
+.project-card-back p,
+.project-card-back a {
+    font-size: 12px;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 10px; /* Reduce padding for smaller screen */
+    font-size: 14px;
 }
     }
     

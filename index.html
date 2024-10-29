@@ -16,8 +16,11 @@
         <div id="particles-js"></div> 
         <div class="container">
             <nav>
+                
                 <img src="./image/logo.png" class="logo"> 
-                <ul>
+                <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- Hamburger icon for opening menu on mobile -->
+                <ul id="navbar" class="nav-links">
+                    <span class="close-btn" onclick="toggleMenu()">&#10006;</span> 
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About me</a></li>
                     <li><a href="#projects-section">Featured projects</a></li>

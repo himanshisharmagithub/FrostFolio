@@ -13,6 +13,11 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzyySC_RTqpBTioXMhBLC
       })
       .catch(error => console.error('Error!', error.message))
   })
+  function toggleMenu() {
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("show");
+}
+
   particlesJS("particles-js", {
     particles: {
         number: {
