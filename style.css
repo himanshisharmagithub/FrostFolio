@@ -51,7 +51,7 @@ nav{
     display: none;
     font-size: 1.5em;
     cursor: pointer;
-    color: #04eadd;
+    color: #fcfdfd;
 }
 
 /* Mobile menu styles */
@@ -953,21 +953,46 @@ html {
         width: 40px;
         height: 60px;
     }
-.project-card {
-    width: 100%; /* Full width on very small screens */
-    height: 380px; /* Slightly shorter height */
-}
-
-/* Adjusting font sizes further for small screens */
-.project-card-front h2,
-.project-card-back p,
-.project-card-back a {
-    font-size: 12px;
-}
-.contact-form input,
-.contact-form textarea {
-    padding: 10px; /* Reduce padding for smaller screen */
-    font-size: 14px;
-}
+    #projects-section {
+        padding: 0 10px; /* Padding around the section */
     }
-    
+
+    .project-card {
+        width: 100%; /* Increase card width to take up more space */
+        margin: -30px auto; /* Center the card with reduced vertical space */
+    }
+    .projects-heading {
+        margin-top: 30px; /* Increase the value on smaller screens */
+    }
+
+    .project-card-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Add padding inside card for spacing */
+    }
+
+    .project-card img {
+        width: 100%; /* Responsive image width */
+        height: 100%; /* Maintain aspect ratio */
+    }
+
+    .project-card-back a {
+        display: inline-block;
+        margin-top: 10px; /* Space between description and link */
+        text-align: center;
+    }
+
+    /* Adjusting font sizes for small screens */
+    .project-card-front h2,
+    .project-card-back p,
+    .project-card-back a {
+        font-size: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px; /* Smaller padding */
+        font-size: 14px;
+    }
+}
